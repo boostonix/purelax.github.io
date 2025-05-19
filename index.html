@@ -11,18 +11,22 @@
     <meta property="og:description" content="Manufacturer of premium quality, organic incense sticks for wholesale and B2B customers worldwide.">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://naturomapurelax.com">
+    <meta property="og:image" content="https://naturomapurelax.com/images/social-preview.jpg">
     
     <title>Naturoma Purelax | Premium Mosquito Repellent Incense Sticks</title>
     
     <!-- Favicon -->
     <link rel="icon" href="favicon.ico" type="image/x-icon">
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
     
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     
     <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
     
     <!-- Animate.css -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
@@ -30,17 +34,25 @@
     <!-- AOS Animation Library -->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     
+    <!-- Splide Slider -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css">
+    
     <style>
         :root {
             --primary-color: #1a5276;
-            --secondary-color: #28b463;
-            --accent-color: #f1c40f;
+            --secondary-color: #27ae60;
+            --accent-color: #e74c3c;
             --light-color: #f8f9fa;
-            --dark-color: #154360;
-            --text-color: #333333;
+            --dark-color: #2c3e50;
+            --text-color: #34495e;
             --white: #ffffff;
-            --transition: all 0.3s ease;
-            --gradient-blue-green: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+            --light-gray: #ecf0f1;
+            --transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+            --gradient-primary: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+            --gradient-accent: linear-gradient(135deg, var(--accent-color) 0%, #f39c12 100%);
+            --box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+            --box-shadow-hover: 0 15px 40px rgba(0, 0, 0, 0.12);
+            --border-radius: 12px;
         }
         
         * {
@@ -51,21 +63,46 @@
         
         html {
             scroll-behavior: smooth;
+            font-size: 16px;
         }
         
         body {
-            font-family: 'Montserrat', sans-serif;
+            font-family: 'Poppins', sans-serif;
             color: var(--text-color);
-            line-height: 1.6;
+            line-height: 1.7;
             overflow-x: hidden;
-            background-color: var(--light-color);
+            background-color: var(--white);
+            -webkit-font-smoothing: antialiased;
         }
         
         h1, h2, h3, h4, h5, h6 {
             font-family: 'Playfair Display', serif;
-            font-weight: 600;
-            color: var(--primary-color);
-            line-height: 1.2;
+            font-weight: 700;
+            color: var(--dark-color);
+            line-height: 1.3;
+            margin-bottom: 1rem;
+        }
+        
+        h1 {
+            font-size: 3.5rem;
+        }
+        
+        h2 {
+            font-size: 2.75rem;
+        }
+        
+        h3 {
+            font-size: 2rem;
+        }
+        
+        h4 {
+            font-size: 1.5rem;
+        }
+        
+        p {
+            margin-bottom: 1.5rem;
+            font-size: 1.1rem;
+            color: var(--text-color);
         }
         
         a {
@@ -86,90 +123,97 @@
         
         .container {
             width: 100%;
-            max-width: 1200px;
+            max-width: 1320px;
             margin: 0 auto;
             padding: 0 20px;
         }
         
-        .btn {
-            display: inline-block;
-            padding: 12px 30px;
-            background-color: var(--accent-color);
-            color: var(--dark-color);
-            border: 2px solid var(--accent-color);
-            border-radius: 30px;
-            font-weight: 600;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            cursor: pointer;
-            transition: var(--transition);
-            position: relative;
-            overflow: hidden;
-        }
-        
-        .btn::after {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: -100%;
-            width: 100%;
-            height: 100%;
-            background: rgba(255,255,255,0.2);
-            transition: var(--transition);
-        }
-        
-        .btn:hover::after {
-            left: 100%;
-        }
-        
-        .btn:hover {
-            background-color: var(--secondary-color);
-            color: var(--white);
-            transform: translateY(-3px);
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-        }
-        
-        .btn-secondary {
-            background-color: transparent;
-            border: 2px solid var(--accent-color);
-            color: var(--primary-color);
-            font-weight: 700;
-            letter-spacing: 0.5px;
-            transition: all 0.3s ease;
-        }
-        
-        .btn-secondary:hover {
-            background-color: var(--accent-color);
-            color: var(--white);
-            transform: translateY(-2px);
-            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-        }
-        
         .section {
-            padding: 80px 0;
+            padding: 100px 0;
             position: relative;
         }
         
         .section-title {
-            font-size: 2.5rem;
-            margin-bottom: 50px;
-            text-align: center;
             position: relative;
             display: inline-block;
+            margin-bottom: 3rem;
+            text-align: center;
         }
         
         .section-title:after {
             content: '';
             display: block;
             width: 80px;
-            height: 3px;
-            background: var(--gradient-blue-green);
-            margin: 15px auto 0;
-            border-radius: 3px;
+            height: 4px;
+            background: var(--gradient-primary);
+            margin: 1.5rem auto 0;
+            border-radius: 2px;
         }
         
         .text-center {
             text-align: center;
+        }
+        
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 14px 32px;
+            font-size: 1rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            border-radius: 50px;
+            cursor: pointer;
+            transition: var(--transition);
+            position: relative;
+            overflow: hidden;
+            border: none;
+            z-index: 1;
+        }
+        
+        .btn-primary {
+            background: var(--gradient-primary);
+            color: var(--white);
+            box-shadow: 0 4px 15px rgba(26, 82, 118, 0.3);
+        }
+        
+        .btn-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(26, 82, 118, 0.4);
+        }
+        
+        .btn-primary:active {
+            transform: translateY(1px);
+        }
+        
+        .btn-accent {
+            background: var(--gradient-accent);
+            color: var(--white);
+            box-shadow: 0 4px 15px rgba(231, 76, 60, 0.3);
+        }
+        
+        .btn-accent:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(231, 76, 60, 0.4);
+        }
+        
+        .btn-outline {
+            background: transparent;
+            border: 2px solid var(--primary-color);
+            color: var(--primary-color);
+        }
+        
+        .btn-outline:hover {
+            background: var(--primary-color);
+            color: var(--white);
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(26, 82, 118, 0.2);
+        }
+        
+        .btn i {
+            margin-left: 8px;
+            font-size: 0.9rem;
         }
         
         /* Header Styles */
@@ -178,9 +222,9 @@
             top: 0;
             left: 0;
             width: 100%;
-            padding: 20px 0;
+            padding: 25px 0;
             background-color: rgba(255, 255, 255, 0.98);
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 2px 20px rgba(0, 0, 0, 0.08);
             z-index: 1000;
             transition: var(--transition);
         }
@@ -188,7 +232,7 @@
         header.scrolled {
             padding: 15px 0;
             background-color: rgba(255, 255, 255, 0.98);
-            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+            box-shadow: 0 5px 30px rgba(0, 0, 0, 0.1);
         }
         
         .header-container {
@@ -198,28 +242,30 @@
         }
         
         .logo {
-            font-size: 1.8rem;
-            font-weight: 700;
-            color: var(--primary-color);
-            font-family: 'Playfair Display', serif;
+            display: flex;
+            align-items: center;
         }
         
-        .logo span {
-            color: var(--secondary-color);
+        .logo img {
+            height: 50px;
+            transition: var(--transition);
         }
         
         nav ul {
             display: flex;
+            align-items: center;
         }
         
         nav ul li {
             margin-left: 30px;
+            position: relative;
         }
         
         nav ul li a {
             font-weight: 500;
             position: relative;
             color: var(--dark-color);
+            font-size: 1.05rem;
         }
         
         nav ul li a:after {
@@ -229,7 +275,7 @@
             left: 0;
             width: 0;
             height: 2px;
-            background: var(--gradient-blue-green);
+            background: var(--gradient-primary);
             transition: var(--transition);
         }
         
@@ -244,23 +290,25 @@
             color: var(--primary-color);
             background: none;
             border: none;
+            z-index: 1001;
         }
         
         .whatsapp-btn {
-            display: flex;
+            display: inline-flex;
             align-items: center;
             background-color: #25D366;
             color: white;
             padding: 10px 20px;
-            border-radius: 30px;
+            border-radius: 50px;
             font-weight: 600;
             margin-left: 30px;
             transition: var(--transition);
+            box-shadow: 0 4px 15px rgba(37, 211, 102, 0.3);
         }
         
         .whatsapp-btn:hover {
             transform: translateY(-3px);
-            box-shadow: 0 5px 15px rgba(37, 211, 102, 0.3);
+            box-shadow: 0 8px 25px rgba(37, 211, 102, 0.4);
         }
         
         .whatsapp-btn i {
@@ -271,8 +319,8 @@
         /* Hero Section */
         .hero {
             height: 100vh;
-            min-height: 700px;
-            background: linear-gradient(rgba(26, 82, 118, 0.8), rgba(40, 180, 99, 0.8)), url('https://images.unsplash.com/photo-1424177558417-016f30ac3059?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D') no-repeat center center/cover;
+            min-height: 800px;
+            background: linear-gradient(rgba(26, 82, 118, 0.85), rgba(39, 174, 96, 0.85)), url('https://images.unsplash.com/photo-1605000797499-95a51c5269ae?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1471&q=80') no-repeat center center/cover;
             color: var(--white);
             display: flex;
             align-items: center;
@@ -288,13 +336,13 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background: url('data:image/svg+xml;utf8,<svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"><path fill="rgba(255,255,255,0.05)" d="M30,10L50,30L70,10L90,30L70,50L90,70L70,90L50,70L30,90L10,70L30,50L10,30L30,10Z" /></svg>');
+            background: url('data:image/svg+xml;utf8,<svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg"><path fill="rgba(255,255,255,0.05)" d="M40,20L60,40L80,20L100,40L80,60L100,80L80,100L60,80L40,100L20,80L40,60L20,40L40,20Z" /></svg>');
             background-size: 100px;
-            animation: float 20s linear infinite;
+            animation: float 30s linear infinite;
         }
         
         .hero-content {
-            max-width: 800px;
+            max-width: 900px;
             margin: 0 auto;
             padding: 0 20px;
             position: relative;
@@ -302,15 +350,17 @@
         }
         
         .hero h1 {
-            font-size: 3.5rem;
+            font-size: 4rem;
             color: var(--white);
-            margin-bottom: 20px;
+            margin-bottom: 1.5rem;
             text-shadow: 0 2px 10px rgba(0,0,0,0.2);
+            line-height: 1.2;
         }
         
         .hero p {
-            font-size: 1.2rem;
-            margin-bottom: 30px;
+            font-size: 1.3rem;
+            margin-bottom: 2.5rem;
+            opacity: 0.9;
             text-shadow: 0 1px 3px rgba(0,0,0,0.2);
         }
         
@@ -318,11 +368,12 @@
             display: flex;
             justify-content: center;
             gap: 20px;
+            flex-wrap: wrap;
         }
         
         .scroll-down {
             position: absolute;
-            bottom: 30px;
+            bottom: 40px;
             left: 50%;
             transform: translateX(-50%);
             animation: bounce 2s infinite;
@@ -332,60 +383,125 @@
         .scroll-down i {
             font-size: 2rem;
             color: var(--white);
+            opacity: 0.7;
+            transition: var(--transition);
+        }
+        
+        .scroll-down:hover i {
+            opacity: 1;
+            transform: translateY(5px);
         }
         
         /* About Section */
         .about {
             background-color: var(--white);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .about::after {
+            content: '';
+            position: absolute;
+            bottom: -100px;
+            right: -100px;
+            width: 300px;
+            height: 300px;
+            background: url('data:image/svg+xml;utf8,<svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg"><path fill="%231a5276" opacity="0.05" d="M40,20L60,40L80,20L100,40L80,60L100,80L80,100L60,80L40,100L20,80L40,60L20,40L40,20Z" /></svg>');
+            background-size: contain;
+            z-index: 0;
         }
         
         .about-content {
-            display: flex;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
             align-items: center;
-            gap: 50px;
+            position: relative;
+            z-index: 1;
         }
         
         .about-img {
-            flex: 1;
-            border-radius: 10px;
+            border-radius: var(--border-radius);
             overflow: hidden;
-            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+            box-shadow: var(--box-shadow);
             transform: perspective(1000px) rotateY(-5deg);
             transition: var(--transition);
-        }
-        
-        .about-img:hover {
-            transform: perspective(1000px) rotateY(0deg);
-        }
-        
-        .about-text {
-            flex: 1;
-        }
-        
-        .about-text h2 {
-            font-size: 2.2rem;
-            margin-bottom: 20px;
-        }
-        
-        .about-text p {
-            margin-bottom: 20px;
-        }
-        
-        /* Products Section */
-        .products {
-            background-color: var(--light-color);
             position: relative;
         }
         
-        .products::before {
+        .about-img::before {
             content: '';
             position: absolute;
             top: 0;
             left: 0;
             width: 100%;
             height: 100%;
-            background: url('data:image/svg+xml;utf8,<svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"><path fill="rgba(26, 82, 118, 0.03)" d="M30,10L50,30L70,10L90,30L70,50L90,70L70,90L50,70L30,90L10,70L30,50L10,30L30,10Z" /></svg>');
-            background-size: 150px;
+            background: var(--gradient-primary);
+            opacity: 0.1;
+            z-index: 1;
+        }
+        
+        .about-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: var(--transition);
+        }
+        
+        .about-img:hover {
+            transform: perspective(1000px) rotateY(0deg);
+            box-shadow: var(--box-shadow-hover);
+        }
+        
+        .about-img:hover img {
+            transform: scale(1.05);
+        }
+        
+        .about-text h2 {
+            color: var(--primary-color);
+            margin-bottom: 1.5rem;
+        }
+        
+        .about-features {
+            margin: 2rem 0;
+        }
+        
+        .feature-item {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 1.5rem;
+        }
+        
+        .feature-icon {
+            width: 50px;
+            height: 50px;
+            background: var(--gradient-primary);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--white);
+            font-size: 1.2rem;
+            margin-right: 1rem;
+            flex-shrink: 0;
+        }
+        
+        /* Products Section */
+        .products {
+            background-color: var(--light-gray);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .products::before {
+            content: '';
+            position: absolute;
+            top: -100px;
+            left: -100px;
+            width: 800px;
+            height: 800px;
+            background: url('data:image/svg+xml;utf8,<svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg"><path fill="%2327ae60" opacity="0.05" d="M40,20L60,40L80,20L100,40L80,60L100,80L80,100L60,80L40,100L20,80L40,60L20,40L40,20Z" /></svg>');
+            background-size: contain;
             z-index: 0;
         }
         
@@ -396,51 +512,42 @@
         
         .products-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
             gap: 30px;
         }
         
         .product-card {
             background-color: var(--white);
-            border-radius: 10px;
+            border-radius: var(--border-radius);
             overflow: hidden;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            box-shadow: var(--box-shadow);
             transition: var(--transition);
             position: relative;
             z-index: 1;
         }
         
-        .product-card::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: var(--gradient-blue-green);
-            opacity: 0;
-            transition: var(--transition);
-            z-index: -1;
-        }
-        
         .product-card:hover {
             transform: translateY(-10px);
-            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
-            color: var(--white);
+            box-shadow: var(--box-shadow-hover);
         }
         
-        .product-card:hover::before {
-            opacity: 1;
-        }
-        
-        .product-card:hover h3,
-        .product-card:hover p {
+        .product-badge {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            background: var(--gradient-accent);
             color: var(--white);
+            padding: 5px 15px;
+            border-radius: 50px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            z-index: 2;
         }
         
         .product-img {
-            height: 250px;
+            height: 800px;
             overflow: hidden;
+            position: relative;
         }
         
         .product-img img {
@@ -451,24 +558,44 @@
         }
         
         .product-card:hover .product-img img {
-            transform: scale(1.05);
+            transform: scale(1.1);
         }
         
         .product-info {
-            padding: 20px;
-            position: relative;
+            padding: 25px;
         }
         
         .product-info h3 {
-            font-size: 1.3rem;
-            margin-bottom: 10px;
-            transition: var(--transition);
+            font-size: 1.5rem;
+            margin-bottom: 0.5rem;
+            color: var(--dark-color);
         }
         
-        .product-info p {
-            margin-bottom: 15px;
+        .product-category {
+            display: inline-block;
             color: var(--secondary-color);
-            transition: var(--transition);
+            font-weight: 500;
+            margin-bottom: 1rem;
+            font-size: 0.9rem;
+        }
+        
+        .product-description {
+            margin-bottom: 1.5rem;
+            font-size: 1rem;
+            color: var(--text-color);
+        }
+        
+        .product-meta {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 1.5rem;
+        }
+        
+        .product-price {
+            font-size: 1.3rem;
+            font-weight: 700;
+            color: var(--primary-color);
         }
         
         /* Gallery Section */
@@ -477,39 +604,12 @@
             position: relative;
         }
         
-        .gallery::after {
-            content: '';
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            width: 100%;
-            height: 100px;
-            background: linear-gradient(to top, var(--light-color), transparent);
-            z-index: 1;
-        }
-        
-        .gallery-slider {
-            width: 100%;
-            height: 500px;
+        .splide__slide {
             position: relative;
-            overflow: hidden;
+            height: 600px;
         }
         
-        .slide {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            opacity: 0;
-            transition: opacity 1s ease;
-        }
-        
-        .slide.active {
-            opacity: 1;
-        }
-        
-        .slide img {
+        .splide__slide img {
             width: 100%;
             height: 100%;
             object-fit: cover;
@@ -520,293 +620,402 @@
             bottom: 0;
             left: 0;
             width: 100%;
-            padding: 30px;
-            background: linear-gradient(transparent, rgba(0, 0, 0, 0.7));
+            padding: 50px;
+            background: linear-gradient(transparent, rgba(0, 0, 0, 0.8));
             color: var(--white);
             z-index: 1;
         }
         
         .slide-content h3 {
-            font-size: 1.8rem;
-            margin-bottom: 10px;
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
             color: var(--white);
         }
         
-        .gallery-dots {
-            display: flex;
-            justify-content: center;
-            padding: 20px 0;
-            position: relative;
-            z-index: 2;
+        .slide-content p {
+            max-width: 600px;
+            opacity: 0.9;
         }
         
-        .dot {
+        .splide__pagination {
+            bottom: 30px;
+        }
+        
+        .splide__pagination__page {
+            background: var(--white);
+            opacity: 0.5;
             width: 12px;
             height: 12px;
-            border-radius: 50%;
-            background-color: var(--secondary-color);
-            margin: 0 5px;
-            cursor: pointer;
+            margin: 0 8px;
             transition: var(--transition);
         }
         
-        .dot.active {
-            background-color: var(--accent-color);
-            transform: scale(1.2);
+        .splide__pagination__page.is-active {
+            transform: scale(1.3);
+            opacity: 1;
+            background: var(--accent-color);
         }
         
         /* Process Section */
         .process {
             background-color: var(--white);
-        }
-        
-        .process-steps {
-            display: flex;
-            justify-content: space-between;
-            flex-wrap: wrap;
-            gap: 30px;
-        }
-        
-        .step {
-            flex: 1;
-            min-width: 250px;
-            text-align: center;
-            padding: 30px;
-            border-radius: 10px;
-            background-color: var(--light-color);
-            transition: var(--transition);
-            border: 1px solid rgba(26, 82, 118, 0.1);
-        }
-        
-        .step:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
-            border-color: var(--accent-color);
-        }
-        
-        .step-icon {
-            width: 80px;
-            height: 80px;
-            margin: 0 auto 20px;
-            background: var(--gradient-blue-green);
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 2rem;
-            color: var(--white);
-            box-shadow: 0 5px 15px rgba(26, 82, 118, 0.2);
-        }
-        
-        .step h3 {
-            margin-bottom: 15px;
-        }
-        
-        /* Testimonials Section */
-        .testimonials {
-            background-color: var(--light-color);
             position: relative;
             overflow: hidden;
         }
         
-        .testimonials::before {
+        .process::before {
             content: '';
             position: absolute;
-            top: -50px;
-            right: -50px;
-            width: 200px;
-            height: 200px;
-            background-color: rgba(40, 180, 99, 0.1);
-            border-radius: 50%;
+            bottom: -100px;
+            right: -100px;
+            width: 300px;
+            height: 300px;
+            background: url('data:image/svg+xml;utf8,<svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg"><path fill="%23e74c3c" opacity="0.05" d="M40,20L60,40L80,20L100,40L80,60L100,80L80,100L60,80L40,100L20,80L40,60L20,40L40,20Z" /></svg>');
+            background-size: contain;
             z-index: 0;
         }
         
-        .testimonials::after {
-            content: '';
-            position: absolute;
-            bottom: -50px;
-            left: -50px;
-            width: 200px;
-            height: 200px;
-            background-color: rgba(26, 82, 118, 0.1);
-            border-radius: 50%;
-            z-index: 0;
-        }
-        
-        .testimonials .container {
+        .process-steps {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
             position: relative;
             z-index: 1;
         }
         
+        .step {
+            text-align: center;
+            padding: 40px 30px;
+            border-radius: var(--border-radius);
+            background-color: var(--white);
+            transition: var(--transition);
+            box-shadow: var(--box-shadow);
+            border-top: 4px solid var(--primary-color);
+        }
+        
+        .step:hover {
+            transform: translateY(-10px);
+            box-shadow: var(--box-shadow-hover);
+        }
+        
+        .step-number {
+            width: 60px;
+            height: 60px;
+            margin: 0 auto 20px;
+            background: var(--gradient-primary);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            color: var(--white);
+            font-weight: 700;
+            box-shadow: 0 5px 15px rgba(26, 82, 118, 0.2);
+        }
+        
+        .step h3 {
+            margin-bottom: 1rem;
+            color: var(--primary-color);
+        }
+        
+        /* Testimonials Section */
+        .testimonials {
+            background-color: var(--light-gray);
+            position: relative;
+            overflow: hidden;
+        }
+        
         .testimonial-slider {
-            max-width: 800px;
+            max-width: 900px;
             margin: 0 auto;
             position: relative;
         }
         
-        .testimonial {
-            text-align: center;
-            padding: 30px;
-            display: none;
+        .testimonial-card {
             background-color: var(--white);
-            border-radius: 10px;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            border-radius: var(--border-radius);
+            padding: 40px;
+            box-shadow: var(--box-shadow);
+            margin: 20px;
+            position: relative;
         }
         
-        .testimonial.active {
-            display: block;
-            animation: fadeIn 1s ease;
+        .testimonial-card::before {
+            content: '"';
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            font-size: 5rem;
+            font-family: 'Playfair Display', serif;
+            color: var(--primary-color);
+            opacity: 0.1;
+            line-height: 1;
         }
         
         .testimonial-text {
             font-size: 1.2rem;
             font-style: italic;
-            margin-bottom: 30px;
+            margin-bottom: 2rem;
             position: relative;
-        }
-        
-        .testimonial-text:before,
-        .testimonial-text:after {
-            content: '"';
-            font-size: 3rem;
-            color: var(--accent-color);
-            opacity: 0.3;
-            position: absolute;
-        }
-        
-        .testimonial-text:before {
-            top: -20px;
-            left: -10px;
-        }
-        
-        .testimonial-text:after {
-            bottom: -40px;
-            right: -10px;
+            color: var(--text-color);
         }
         
         .testimonial-author {
             display: flex;
             align-items: center;
-            justify-content: center;
         }
         
         .author-img {
-            width: 60px;
-            height: 60px;
+            width: 70px;
+            height: 70px;
             border-radius: 50%;
             overflow: hidden;
-            margin-right: 15px;
-            border: 3px solid var(--accent-color);
+            margin-right: 20px;
+            border: 3px solid var(--primary-color);
+        }
+        
+        .author-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
         }
         
         .author-info h4 {
-            margin-bottom: 5px;
+            margin-bottom: 0.5rem;
+            color: var(--dark-color);
         }
         
         .author-info p {
             font-size: 0.9rem;
             color: var(--secondary-color);
+            margin-bottom: 0;
         }
         
-        .testimonial-nav {
-            display: flex;
-            justify-content: center;
-            margin-top: 30px;
+        /* Stats Section */
+        .stats {
+            background: var(--gradient-primary);
+            color: var(--white);
+            padding: 80px 0;
+            position: relative;
+            overflow: hidden;
         }
         
-        .testimonial-nav button {
-            width: 12px;
-            height: 12px;
-            border-radius: 50%;
-            border: none;
-            background-color: var(--secondary-color);
-            margin: 0 5px;
-            cursor: pointer;
-            transition: var(--transition);
+        .stats::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('data:image/svg+xml;utf8,<svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg"><path fill="rgba(255,255,255,0.05)" d="M40,20L60,40L80,20L100,40L80,60L100,80L80,100L60,80L40,100L20,80L40,60L20,40L40,20Z" /></svg>');
+            background-size: 150px;
         }
         
-        .testimonial-nav button.active {
-            background-color: var(--accent-color);
-            transform: scale(1.2);
+        .stats-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 30px;
+            position: relative;
+            z-index: 1;
+        }
+        
+        .stat-item {
+            text-align: center;
+            padding: 30px;
+        }
+        
+        .stat-number {
+            font-size: 3.5rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            font-family: 'Playfair Display', serif;
+            color: var(--white);
+        }
+        
+        .stat-label {
+            font-size: 1.1rem;
+            opacity: 0.9;
         }
         
         /* Contact Section */
         .contact {
             background-color: var(--white);
+            position: relative;
+            overflow: hidden;
         }
         
         .contact-container {
-            display: flex;
-            gap: 50px;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
         }
         
         .contact-info {
-            flex: 1;
+            position: relative;
+            z-index: 1;
         }
         
         .contact-info h3 {
-            font-size: 1.5rem;
-            margin-bottom: 20px;
+            font-size: 1.8rem;
+            margin-bottom: 2rem;
+            color: var(--primary-color);
         }
         
         .contact-details {
-            margin-bottom: 30px;
+            margin-bottom: 3rem;
         }
         
         .contact-item {
             display: flex;
             align-items: flex-start;
-            margin-bottom: 15px;
+            margin-bottom: 1.5rem;
         }
         
-        .contact-item i {
+        .contact-icon {
+            width: 50px;
+            height: 50px;
+            background: var(--gradient-primary);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--white);
             font-size: 1.2rem;
-            color: var(--accent-color);
-            margin-right: 15px;
-            margin-top: 5px;
+            margin-right: 1.5rem;
+            flex-shrink: 0;
+        }
+        
+        .contact-text h4 {
+            margin-bottom: 0.5rem;
+            color: var(--dark-color);
+        }
+        
+        .contact-text p, .contact-text a {
+            color: var(--text-color);
+            transition: var(--transition);
+        }
+        
+        .contact-text a:hover {
+            color: var(--primary-color);
+        }
+        
+        .social-links {
+            display: flex;
+            gap: 15px;
+            margin-top: 2rem;
+        }
+        
+        .social-links a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 45px;
+            height: 45px;
+            border-radius: 50%;
+            background-color: var(--light-gray);
+            color: var(--primary-color);
+            font-size: 1.2rem;
+            transition: var(--transition);
+        }
+        
+        .social-links a:hover {
+            background: var(--gradient-primary);
+            color: var(--white);
+            transform: translateY(-5px);
+            box-shadow: 0 5px 15px rgba(26, 82, 118, 0.3);
         }
         
         .contact-form {
-            flex: 1;
+            background-color: var(--white);
+            border-radius: var(--border-radius);
+            padding: 40px;
+            box-shadow: var(--box-shadow);
+            position: relative;
+            z-index: 1;
+        }
+        
+        .contact-form h3 {
+            font-size: 1.8rem;
+            margin-bottom: 2rem;
+            color: var(--primary-color);
         }
         
         .form-group {
-            margin-bottom: 20px;
+            margin-bottom: 1.5rem;
         }
         
         .form-group label {
             display: block;
-            margin-bottom: 8px;
+            margin-bottom: 0.5rem;
             font-weight: 500;
+            color: var(--dark-color);
         }
         
-        .form-group input,
-        .form-group textarea {
+        .form-control {
             width: 100%;
-            padding: 12px 15px;
-            border: 1px solid #ddd;
-            border-radius: 5px;
+            padding: 12px 20px;
+            border: 1px solid var(--light-gray);
+            border-radius: var(--border-radius);
             font-family: inherit;
+            font-size: 1rem;
             transition: var(--transition);
+            background-color: var(--light-gray);
         }
         
-        .form-group input:focus,
-        .form-group textarea:focus {
+        .form-control:focus {
             outline: none;
-            border-color: var(--accent-color);
-            box-shadow: 0 0 0 3px rgba(241, 196, 15, 0.2);
+            border-color: var(--primary-color);
+            box-shadow: 0 0 0 3px rgba(26, 82, 118, 0.1);
+            background-color: var(--white);
         }
         
-        .form-group textarea {
+        textarea.form-control {
             min-height: 150px;
             resize: vertical;
         }
         
+        /* CTA Section */
+        .cta {
+            background: linear-gradient(rgba(26, 82, 118, 0.9), rgba(26, 82, 118, 0.9)), url('https://images.unsplash.com/photo-1589998059171-988d887df646?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1476&q=80') no-repeat center center/cover;
+            color: var(--white);
+            text-align: center;
+            padding: 100px 0;
+            position: relative;
+        }
+        
+        .cta::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('data:image/svg+xml;utf8,<svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg"><path fill="rgba(255,255,255,0.05)" d="M40,20L60,40L80,20L100,40L80,60L100,80L80,100L60,80L40,100L20,80L40,60L20,40L40,20Z" /></svg>');
+            background-size: 150px;
+        }
+        
+        .cta .container {
+            position: relative;
+            z-index: 1;
+        }
+        
+        .cta h2 {
+            color: var(--white);
+            margin-bottom: 1.5rem;
+        }
+        
+        .cta p {
+            max-width: 700px;
+            margin: 0 auto 2.5rem;
+            opacity: 0.9;
+            font-size: 1.2rem;
+        }
+        
         /* Footer */
         footer {
-            background: var(--gradient-blue-green);
+            background-color: var(--dark-color);
             color: var(--white);
-            padding: 60px 0 20px;
+            padding: 80px 0 30px;
             position: relative;
         }
         
@@ -817,20 +1026,20 @@
             left: 0;
             width: 100%;
             height: 10px;
-            background: linear-gradient(to right, var(--accent-color), transparent);
+            background: var(--gradient-primary);
         }
         
         .footer-container {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
             gap: 40px;
-            margin-bottom: 40px;
+            margin-bottom: 50px;
         }
         
         .footer-col h3 {
             color: var(--white);
-            margin-bottom: 20px;
-            font-size: 1.3rem;
+            margin-bottom: 1.5rem;
+            font-size: 1.5rem;
             position: relative;
             display: inline-block;
         }
@@ -838,59 +1047,49 @@
         .footer-col h3::after {
             content: '';
             position: absolute;
-            bottom: -5px;
+            bottom: -8px;
             left: 0;
             width: 50px;
-            height: 2px;
-            background-color: var(--accent-color);
+            height: 3px;
+            background: var(--gradient-primary);
         }
         
         .footer-col p {
-            margin-bottom: 20px;
-            opacity: 0.9;
+            opacity: 0.8;
+            margin-bottom: 1.5rem;
         }
         
         .footer-links li {
-            margin-bottom: 10px;
+            margin-bottom: 0.8rem;
         }
         
         .footer-links a {
-            opacity: 0.9;
+            opacity: 0.8;
             transition: var(--transition);
             display: inline-block;
         }
         
         .footer-links a:hover {
             opacity: 1;
-            color: var(--accent-color);
+            color: var(--secondary-color);
             transform: translateX(5px);
         }
         
-        .social-links {
+        .footer-contact li {
             display: flex;
-            gap: 15px;
+            align-items: flex-start;
+            margin-bottom: 1rem;
         }
         
-        .social-links a {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            width: 40px;
-            height: 40px;
-            border-radius: 50%;
-            background-color: rgba(255, 255, 255, 0.1);
-            transition: var(--transition);
-        }
-        
-        .social-links a:hover {
-            background-color: var(--accent-color);
-            color: var(--dark-color);
-            transform: translateY(-5px);
+        .footer-contact i {
+            margin-right: 15px;
+            color: var(--secondary-color);
+            margin-top: 5px;
         }
         
         .footer-bottom {
             text-align: center;
-            padding-top: 20px;
+            padding-top: 30px;
             border-top: 1px solid rgba(255, 255, 255, 0.1);
             opacity: 0.7;
             font-size: 0.9rem;
@@ -901,24 +1100,55 @@
             position: fixed;
             bottom: 30px;
             right: 30px;
-            width: 60px;
-            height: 60px;
+            width: 70px;
+            height: 70px;
             background-color: #25D366;
             color: var(--white);
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 1.8rem;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+            font-size: 2rem;
+            box-shadow: 0 5px 25px rgba(0, 0, 0, 0.2);
             z-index: 999;
             transition: var(--transition);
             animation: pulse 2s infinite;
         }
         
         .whatsapp-float:hover {
-            transform: scale(1.1);
-            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+            transform: scale(1.1) translateY(-5px);
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
+        }
+        
+        /* Back to Top Button */
+        .back-to-top {
+            position: fixed;
+            bottom: 110px;
+            right: 30px;
+            width: 50px;
+            height: 50px;
+            background: var(--gradient-primary);
+            color: var(--white);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2rem;
+            box-shadow: 0 5px 15px rgba(26, 82, 118, 0.3);
+            z-index: 998;
+            opacity: 0;
+            visibility: hidden;
+            transition: var(--transition);
+        }
+        
+        .back-to-top.active {
+            opacity: 1;
+            visibility: visible;
+        }
+        
+        .back-to-top:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(26, 82, 118, 0.4);
         }
         
         /* Floating Elements */
@@ -940,11 +1170,67 @@
             animation: float 15s infinite linear;
         }
         
+        /* Modal */
+        .modal {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.8);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 1002;
+            opacity: 0;
+            visibility: hidden;
+            transition: var(--transition);
+        }
+        
+        .modal.active {
+            opacity: 1;
+            visibility: visible;
+        }
+        
+        .modal-content {
+            background-color: var(--white);
+            border-radius: var(--border-radius);
+            width: 90%;
+            max-width: 800px;
+            max-height: 90vh;
+            overflow-y: auto;
+            padding: 40px;
+            position: relative;
+            transform: translateY(20px);
+            transition: var(--transition);
+        }
+        
+        .modal.active .modal-content {
+            transform: translateY(0);
+        }
+        
+        .close-modal {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            font-size: 1.5rem;
+            color: var(--text-color);
+            background: none;
+            border: none;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+        
+        .close-modal:hover {
+            color: var(--accent-color);
+            transform: rotate(90deg);
+        }
+        
         /* Animations */
         @keyframes fadeInUp {
             from {
                 opacity: 0;
-                transform: translateY(20px);
+                transform: translateY(30px);
             }
             to {
                 opacity: 1;
@@ -1022,32 +1308,68 @@
         }
         
         /* Responsive Styles */
-        @media (max-width: 992px) {
-            .section-title {
-                font-size: 2.2rem;
+        @media (max-width: 1200px) {
+            .container {
+                max-width: 1140px;
             }
             
-            .about-content {
-                flex-direction: column;
-            }
-            
-            .contact-container {
-                flex-direction: column;
-            }
-            
-            .hero h1 {
+            h1 {
                 font-size: 3rem;
+            }
+            
+            h2 {
+                font-size: 2.5rem;
+            }
+        }
+        
+        @media (max-width: 992px) {
+            .container {
+                max-width: 960px;
+            }
+            
+            .section {
+                padding: 80px 0;
+            }
+            
+            .about-content,
+            .contact-container {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+            
+            .about-img {
+                max-width: 600px;
+                margin: 0 auto;
+            }
+            
+            .splide__slide {
+                height: 500px;
+            }
+            
+            .slide-content {
+                padding: 30px;
+            }
+            
+            .slide-content h3 {
+                font-size: 2rem;
             }
         }
         
         @media (max-width: 768px) {
-            .section {
-                padding: 60px 0;
+            .container {
+                max-width: 720px;
             }
             
-            .section-title {
-                font-size: 2rem;
-                margin-bottom: 40px;
+            .section {
+                padding: 70px 0;
+            }
+            
+            h1 {
+                font-size: 2.5rem;
+            }
+            
+            h2 {
+                font-size: 2.2rem;
             }
             
             .mobile-menu-btn {
@@ -1056,20 +1378,20 @@
             
             nav {
                 position: fixed;
-                top: 80px;
-                left: 0;
-                width: 100%;
+                top: 0;
+                left: -100%;
+                width: 80%;
+                max-width: 400px;
+                height: 100vh;
                 background-color: var(--white);
-                padding: 20px;
-                box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
-                transform: translateY(-150%);
-                opacity: 0;
+                padding: 100px 30px 30px;
+                box-shadow: 5px 0 30px rgba(0, 0, 0, 0.1);
                 transition: var(--transition);
+                z-index: 1000;
             }
             
             nav.active {
-                transform: translateY(0);
-                opacity: 1;
+                left: 0;
             }
             
             nav ul {
@@ -1082,34 +1404,74 @@
             
             .whatsapp-btn {
                 margin: 20px 0 0;
+                width: 100%;
                 justify-content: center;
             }
             
             .hero h1 {
-                font-size: 2.5rem;
+                font-size: 2.8rem;
+            }
+            
+            .hero p {
+                font-size: 1.1rem;
             }
             
             .hero-btns {
                 flex-direction: column;
-                align-items: center;
+                gap: 15px;
             }
             
-            .process-steps {
-                flex-direction: column;
+            .btn {
+                width: 100%;
+                max-width: 300px;
+                margin: 0 auto;
             }
             
-            .gallery-slider {
+            .products-grid {
+                grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            }
+            
+            .splide__slide {
                 height: 400px;
+            }
+            
+            .slide-content h3 {
+                font-size: 1.8rem;
+            }
+            
+            .testimonial-card {
+                padding: 30px 20px;
+            }
+            
+            .testimonial-text {
+                font-size: 1.1rem;
             }
         }
         
         @media (max-width: 576px) {
-            .section {
-                padding: 50px 0;
+            .container {
+                max-width: 540px;
+                padding: 0 15px;
             }
             
-            .section-title {
-                font-size: 1.8rem;
+            .section {
+                padding: 60px 0;
+            }
+            
+            h1 {
+                font-size: 2.2rem;
+            }
+            
+            h2 {
+                font-size: 2rem;
+            }
+            
+            .section-title:after {
+                width: 60px;
+            }
+            
+            .hero {
+                min-height: 700px;
             }
             
             .hero h1 {
@@ -1120,38 +1482,112 @@
                 font-size: 1rem;
             }
             
-            .gallery-slider {
-                height: 300px;
+            .splide__slide {
+                height: 350px;
+            }
+            
+            .slide-content {
+                padding: 20px;
             }
             
             .slide-content h3 {
                 font-size: 1.5rem;
             }
+            
+            .slide-content p {
+                font-size: 0.9rem;
+            }
+            
+            .stats-container {
+                grid-template-columns: 1fr 1fr;
+            }
+            
+            .stat-item {
+                padding: 20px;
+            }
+            
+            .stat-number {
+                font-size: 2.5rem;
+            }
+            
+            .contact-form {
+                padding: 30px 20px;
+            }
+            
+            .whatsapp-float {
+                width: 60px;
+                height: 60px;
+                font-size: 1.8rem;
+                bottom: 20px;
+                right: 20px;
+            }
+            
+            .back-to-top {
+                width: 45px;
+                height: 45px;
+                font-size: 1rem;
+                bottom: 90px;
+                right: 20px;
+            }
         }
+        
+        @media (max-width: 400px) {
+            .products-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .stats-container {
+                grid-template-columns: 1fr;
+            }
+        }
+/* ===== Mobile Horizontal Scroll ===== */
+@media (max-width: 768px) {
+  .products-grid {
+    display: flex !important;
+    flex-wrap: nowrap !important;
+    overflow-x: auto !important;
+    -webkit-overflow-scrolling: touch;
+    gap: 15px;
+    padding: 15px 10px 25px 10px;
+    margin: 0 -10px;
+  }
+
+  .product-card {
+    min-width: 280px;
+    scroll-snap-align: start;
+    margin-bottom: 0;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  }
+
+  /* Hide scrollbar (optional) */
+  .products-grid::-webkit-scrollbar {
+    display: none;
+  }
+}
     </style>
 </head>
 <body>
     <!-- Floating Elements Background -->
-    <div class="floating-elements">
-        <div class="floating-element" style="width: 50px; height: 50px; top: 20%; left: 10%; animation-duration: 20s;"></div>
-        <div class="floating-element" style="width: 30px; height: 30px; top: 50%; left: 80%; animation-duration: 15s;"></div>
-        <div class="floating-element" style="width: 40px; height: 40px; top: 70%; left: 20%; animation-duration: 25s;"></div>
-        <div class="floating-element" style="width: 60px; height: 60px; top: 30%; left: 60%; animation-duration: 18s;"></div>
-    </div>
+    <div class="floating-elements"></div>
     
     <!-- WhatsApp Float Button -->
-    <a href="https://wa.me/919408107835" class="whatsapp-float" target="_blank">
+    <a href="https://wa.me/919408107835" class="whatsapp-float" target="_blank" aria-label="Contact us on WhatsApp">
         <i class="fab fa-whatsapp"></i>
+    </a>
+    
+    <!-- Back to Top Button -->
+    <a href="#home" class="back-to-top" aria-label="Back to top">
+        <i class="fas fa-arrow-up"></i>
     </a>
     
     <!-- Header -->
     <header id="header">
         <div class="container header-container">
-           <a href="index.html" class="logo">
-  <img src="https://raw.githubusercontent.com/boostonix/purelax.github.io/refs/heads/main/logo%20purelax.png" alt="Naturoma Purelax Logo" style="height: 50px;">
-</a>
+            <a href="index.html" class="logo">
+                <img src="https://raw.githubusercontent.com/boostonix/purelax.github.io/main/logo%20purelax.png" alt="Naturoma Purelax Logo">
+            </a>
             
-            <button class="mobile-menu-btn" id="mobileMenuBtn">
+            <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Toggle navigation">
                 <i class="fas fa-bars"></i>
             </button>
             
@@ -1163,9 +1599,9 @@
                     <li><a href="#process">Process</a></li>
                     <li><a href="#testimonials">Testimonials</a></li>
                     <li><a href="#contact">Contact</a></li>
+                    <li><a href="#" id="privacyLink">Privacy Policy</a></li>
                 </ul>
                 
-                </a>
             </nav>
         </div>
     </header>
@@ -1174,13 +1610,14 @@
     <section class="hero" id="home">
         <div class="hero-content">
             <h1 data-aos="fade-up" data-aos-duration="1000">Premium Incense Sticks By Purelax</h1>
-            <p data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">Experience the purest aromas with our herbal incense sticks. Perfect for relaxation, meditation, and creating a serene atmosphere and repelling the pests.</p>
+            <p data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200"><p style="color: white;">Experience the purest aromas with our herbal incense sticks. Perfect for relaxation, meditation, and creating a serene atmosphere while repelling pests naturally.</p>
             <div class="hero-btns" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="400">
-                <a href="#products" class="btn">Explore Products</a>
+                <a href="#products" class="btn btn-primary">Explore Products</a>
+                <a href="#contact" class="btn btn-primary">Request Samples</a>
             </div>
         </div>
         
-        <a href="#about" class="scroll-down">
+        <a href="#about" class="scroll-down" aria-label="Scroll down">
             <i class="fas fa-chevron-down"></i>
         </a>
     </section>
@@ -1198,9 +1635,40 @@
                 <div class="about-text" data-aos="fade-left">
                     <h2>Our Story of Aromatic Excellence</h2>
                     <p>Founded in 2016, Purelax by Naturoma is a next-generation incense stick brand created to blend fragrance, function, and feeling — all in one. Designed for those who value peace, purity, and purpose, our incense sticks do more than just smell good.</p>
-                    <p>With multiple fragrance variants, each stick is crafted to transform your space — from energizing mornings to calming evenings. Unlike ordinary incense, Purelax is eye-soothing, non-irritating, and completely free from the harsh chemicals that cause headaches or discomfort.</p>
-                    <p>And it's not just about scent — Purelax packs a punch. Our advanced formula helps repel mosquitoes while filling the air with soul-soothing aromas. It's power-packed, long-lasting, and wrapped in nature's essence — making it the perfect companion for your daily rituals.</p>
-                    <a href="#process" class="btn">Our Process</a>
+                    
+                    <div class="about-features">
+                        <div class="feature-item">
+                            <div class="feature-icon">
+                                <i class="fas fa-leaf"></i>
+                            </div>
+                            <div>
+                                <h4>100% Natural Ingredients</h4>
+                                <p>We use only the finest organic herbs, flowers, and essential oils in our formulations.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="feature-item">
+                            <div class="feature-icon">
+                                <i class="fas fa-bug"></i>
+                            </div>
+                            <div>
+                                <h4>Mosquito Repellent</h4>
+                                <p>Our unique formula naturally repels mosquitoes while providing aromatic benefits.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="feature-item">
+                            <div class="feature-icon">
+                                <i class="fas fa-certificate"></i>
+                            </div>
+                            <div>
+                                <h4>Quality Certified</h4>
+                                <p>All our products meet international quality and safety standards.</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <a href="#process" class="btn btn-primary">Our Manufacturing Process</a>
                 </div>
             </div>
         </div>
@@ -1210,59 +1678,135 @@
     <section class="section products" id="products">
         <div class="container">
             <h2 class="section-title" data-aos="fade-up">Our Product Range</h2>
+            <p class="text-center" data-aos="fade-up" data-aos-delay="100">Discover our premium collection of incense sticks designed for wholesalers and retailers worldwide.</p>
             
             <div class="products-grid">
                 <!-- Product 1 -->
-                <div class="product-card" data-aos="fade-up" data-aos-delay="100">
+                <div class="product-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="product-badge">HERBAL POWER PACK</div>
                     <div class="product-img">
-                        <img src="https://raw.githubusercontent.com/boostonix/purelax.github.io/refs/heads/main/product%201.jpg">
+                        <img src="https://raw.githubusercontent.com/boostonix/purelax.github.io/refs/heads/main/product%20image%201.png">
                     </div>
                     <div class="product-info">
-                        <h3>Purelax Incense Stick</h3>
-                        <p>Wholesale pack of 500 sticks</p>
-                        <p>A soothing blend of purity and nature – Purelax, where every breath heals.</p>
-                        <a href="#contact" class="btn">Enquire Now</a>
+                        <span class="product-category">Mosquito Repellent</span>
+                        <h3>Purelax Power</h3>
+                        <p class="product-description">PURELAX Power – Herbal Repellent Sticks
+Fights mosquitoes with herbs. Safe for babies, perfect for peaceful sleep.</p>
+                        <div class="product-meta">
+                            <a href="#contact" class="btn btn-accent">Enquire Now</a>
+                        </div>
                     </div>
                 </div>
+                
+                <!-- Product 2 -->
+              <div class="product-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="product-badge">LONG-LASTING POWER</div>
+                    <div class="product-img">
+                        <img src="https://raw.githubusercontent.com/boostonix/purelax.github.io/refs/heads/main/product%20image%202.png">
+                    </div>
+                    <div class="product-info">
+                        <span class="product-category">Mosquito Repellent</span>
+                        <h3>Purelax Jumbo</h3>
+                        <p class="product-description">PURELAX Jumbo – Extra Long Incense Sticks
+Burns longer, smells stronger. Perfect for large spaces & deep relaxation.
+</p>
+                        <div class="product-meta">
+                            <a href="#contact" class="btn btn-accent">Enquire Now</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Product 3 -->
+              <div class="product-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="product-badge">PURE HERBAL STRENGTH</div>
+                    <div class="product-img">
+                        <img src="https://raw.githubusercontent.com/boostonix/purelax.github.io/refs/heads/main/product%20image%203.png">
+                    </div>
+                    <div class="product-info">
+                        <span class="product-category">Mosquito Repellent</span>
+                        <h3>Purelax Herbal</h3>
+                        <p class="product-description">PURELAX Herbal – Natural Eco Incense Sticks
+Crafted with herbs for calm, clean air. Ideal for daily peaceful rituals.</p>
+                        <div class="product-meta">
+                            <a href="#contact" class="btn btn-accent">Enquire Now</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Product 4 -->
+            <div class="product-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="product-badge">COMING SOON</div>
+                    <div class="product-img">
+                        <img src="https://images.unsplash.com/photo-1614332287897-cdc485fa562d?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D">
+                    </div>
+                    <div class="product-info">
+                        <span class="product-category">Mosquito Repellent</span>
+                        <h3>Purelax Incense</h3>
+                        <p class="product-description">COMING SOON</p>
+                        <div class="product-meta">
+                            <a href="#contact" class="btn btn-accent">Enquire Now</a>
+                        </div>
+                    </div>
+                </div>
+            
+            <div class="text-center" data-aos="fade-up" data-aos-delay="600">
+                <a href="#contact" class="btn btn-primary" style="margin-top: 50px;">Request Full Catalog</a>
             </div>
         </div>
     </section>
     
     <!-- Gallery Section -->
     <section class="gallery">
-        <div class="gallery-slider">
-            <!-- Slide 1 -->
-            <div class="slide active">
-                <img src="https://images.unsplash.com/photo-1551690935-a9e6f0a7e788?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Manufacturing Facility">
-                <div class="slide-content">
-                    <h3>State-of-the-Art Manufacturing</h3>
-                    <p>Our facility combines tradition with technology for consistent quality</p>
-                </div>
-            </div>
-            
-            <!-- Slide 2 -->
-            <div class="slide">
-                <img src="https://images.unsplash.com/photo-1589998059171-988d887df646?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1476&q=80" alt="Raw Materials">
-                <div class="slide-content">
-                    <h3>Premium Natural Ingredients</h3>
-                    <p>Sourced from sustainable suppliers worldwide</p>
-                </div>
-            </div>
-            
-            <!-- Slide 3 -->
-            <div class="slide">
-                <img src="https://images.unsplash.com/photo-1605000797499-95a51c5269ae?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1471&q=80" alt="Quality Control">
-                <div class="slide-content">
-                    <h3>Rigorous Quality Control</h3>
-                    <p>Every batch undergoes multiple quality checks</p>
-                </div>
+        <div class="splide" aria-label="Our Manufacturing Facility">
+            <div class="splide__track">
+                <ul class="splide__list">
+                    <li class="splide__slide">
+                        <img src="https://images.unsplash.com/photo-1551690935-a9e6f0a7e788?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Manufacturing Facility">
+                        <div class="slide-content">
+                            <h3>State-of-the-Art Manufacturing</h3>
+                            <p style="color: white;">Our 20,000 sq.ft. facility combines tradition with technology for consistent quality and large-scale production capacity.</p>
+                        </div>
+                    </li>
+                    <li class="splide__slide">
+                        <img src="https://images.unsplash.com/photo-1589998059171-988d887df646?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1476&q=80" alt="Raw Materials">
+                        <div class="slide-content">
+                            <h3>Premium Natural Ingredients</h3>
+                            <p style="color: white;">We source only the finest organic herbs, flowers, and essential oils from sustainable suppliers worldwide.</p>
+                        </div>
+                    </li>
+                    <li class="splide__slide">
+                        <img src="https://images.unsplash.com/photo-1605000797499-95a51c5269ae?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1471&q=80" alt="Quality Control">
+                        <div class="slide-content">
+                            <h3>Rigorous Quality Control</h3>
+                            <p style="color: white;">Every batch undergoes multiple quality checks for fragrance consistency, burn time, and safety standards.</p>
+                        </div>
+                    </li>
+                </ul>
             </div>
         </div>
-        
-        <div class="gallery-dots">
-            <div class="dot active" data-slide="0"></div>
-            <div class="dot" data-slide="1"></div>
-            <div class="dot" data-slide="2"></div>
+    </section>
+    
+    <!-- Stats Section -->
+    <section class="stats">
+        <div class="container">
+            <div class="stats-container">
+                <div class="stat-item" data-aos="fade-up" data-aos-delay="100">
+                    <div class="stat-number" id="yearsExp">0</div>
+                    <div class="stat-label">Years Experience</div>
+                </div>
+                <div class="stat-item" data-aos="fade-up" data-aos-delay="200">
+                    <div class="stat-number" id="productsMade">0</div>
+                    <div class="stat-label">Products Made</div>
+                </div>
+                <div class="stat-item" data-aos="fade-up" data-aos-delay="300">
+                    <div class="stat-number" id="happyClients">0</div>
+                    <div class="stat-label">Happy Clients</div>
+                </div>
+                <div class="stat-item" data-aos="fade-up" data-aos-delay="400">
+                    <div class="stat-number" id="countries">0</div>
+                    <div class="stat-label">Countries Served</div>
+                </div>
+            </div>
         </div>
     </section>
     
@@ -1270,42 +1814,42 @@
     <section class="section process" id="process">
         <div class="container">
             <h2 class="section-title" data-aos="fade-up">Our Manufacturing Process</h2>
+            <p class="text-center" data-aos="fade-up" data-aos-delay="100">Every Purelax incense stick is crafted with precision and care through our 5-step process</p>
             
             <div class="process-steps">
                 <!-- Step 1 -->
-                <div class="step" data-aos="fade-up" data-aos-delay="100">
-                    <div class="step-icon">
-                        <i class="fas fa-seedling"></i>
-                    </div>
+                <div class="step" data-aos="fade-up" data-aos-delay="200">
+                    <div class="step-number">1</div>
                     <h3>Ingredient Sourcing</h3>
                     <p>We carefully select organic herbs, flowers, and essential oils from trusted sustainable sources worldwide.</p>
                 </div>
                 
                 <!-- Step 2 -->
-                <div class="step" data-aos="fade-up" data-aos-delay="200">
-                    <div class="step-icon">
-                        <i class="fas fa-mortar-pestle"></i>
-                    </div>
+                <div class="step" data-aos="fade-up" data-aos-delay="300">
+                    <div class="step-number">2</div>
                     <h3>Blending</h3>
                     <p>Traditional recipes are combined with modern techniques to create perfect fragrance blends.</p>
                 </div>
                 
                 <!-- Step 3 -->
-                <div class="step" data-aos="fade-up" data-aos-delay="300">
-                    <div class="step-icon">
-                        <i class="fas fa-fire"></i>
-                    </div>
+                <div class="step" data-aos="fade-up" data-aos-delay="400">
+                    <div class="step-number">3</div>
                     <h3>Production</h3>
                     <p>Our automated production line ensures consistent quality while maintaining artisanal standards.</p>
                 </div>
                 
                 <!-- Step 4 -->
-                <div class="step" data-aos="fade-up" data-aos-delay="400">
-                    <div class="step-icon">
-                        <i class="fas fa-check-circle"></i>
-                    </div>
+                <div class="step" data-aos="fade-up" data-aos-delay="500">
+                    <div class="step-number">4</div>
                     <h3>Quality Control</h3>
                     <p>Every batch undergoes rigorous testing for fragrance, burn time, and safety standards.</p>
+                </div>
+                
+                <!-- Step 5 -->
+                <div class="step" data-aos="fade-up" data-aos-delay="600">
+                    <div class="step-number">5</div>
+                    <h3>Packaging</h3>
+                    <p>Eco-friendly packaging that preserves fragrance and ensures safe delivery worldwide.</p>
                 </div>
             </div>
         </div>
@@ -1315,61 +1859,72 @@
     <section class="section testimonials" id="testimonials">
         <div class="container">
             <h2 class="section-title" data-aos="fade-up">What Our Clients Say</h2>
+            <p class="text-center" data-aos="fade-up" data-aos-delay="100">Trusted by businesses and wellness centers worldwide</p>
             
-            <div class="testimonial-slider">
-                <!-- Testimonial 1 -->
-                <div class="testimonial active">
-                    <div class="testimonial-text">
-                        <p>We've been sourcing from Naturoma Purelax for over 5 years and their consistency in quality is unmatched. Their incense sticks are our best-selling products across all our wellness stores.</p>
-                    </div>
-                    <div class="testimonial-author">
-                        <div class="author-img">
-                            <img src="https://randomuser.me/api/portraits/women/15.jpg" alt="Ankita Lokhande">
-                        </div>
-                        <div class="author-info">
-                            <h4>Ankita Lokhande</h4>
-                            <p>CEO, ZenLife Wellness</p>
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- Testimonial 2 -->
-                <div class="testimonial">
-                    <div class="testimonial-text">
-                        <p>The floral collection from Naturoma has transformed our spa experience. Clients constantly compliment the delicate, natural fragrances that aren't overpowering like synthetic alternatives.</p>
-                    </div>
-                    <div class="testimonial-author">
-                        <div class="author-img">
-                            <img src="https://randomuser.me/api/portraits/men/40.jpg" alt="Arnav Thakur">
-                        </div>
-                        <div class="author-info">
-                            <h4>Arnav Thakur</h4>
-                            <p>Owner, Social Spa Chain</p>
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- Testimonial 3 -->
-                <div class="testimonial">
-                    <div class="testimonial-text">
-                        <p>As an importer of wellness products, we appreciate Naturoma's attention to international compliance and packaging standards. Their products meet all EU regulations effortlessly.</p>
-                    </div>
-                    <div class="testimonial-author">
-                        <div class="author-img">
-                            <img src="https://randomuser.me/api/portraits/women/26.jpg" alt="Nisha Tiwari">
-                        </div>
-                        <div class="author-info">
-                            <h4>Nisha Tiwari</h4>
-                            <p>Director, IndiWell Imports</p>
-                        </div>
-                    </div>
+            <div class="splide testimonial-slider" data-aos="fade-up" data-aos-delay="200">
+                <div class="splide__track">
+                    <ul class="splide__list">
+                        <li class="splide__slide">
+                            <div class="testimonial-card">
+                                <div class="testimonial-text">
+                                    <p>We've been sourcing from Naturoma Purelax for over 5 years and their consistency in quality is unmatched. Their incense sticks are our best-selling products across all our wellness stores. The mosquito repellent line has been particularly popular with our customers.</p>
+                                </div>
+                                <div class="testimonial-author">
+                                    <div class="author-img">
+                                        <img src="https://randomuser.me/api/portraits/women/45.jpg" alt="Ankita Lokhande">
+                                    </div>
+                                    <div class="author-info">
+                                        <h4>Ankita Lokhande</h4>
+                                        <p>CEO, ZenLife Wellness</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="splide__slide">
+                            <div class="testimonial-card">
+                                <div class="testimonial-text">
+                                    <p>The floral collection from Naturoma has transformed our spa experience. Clients constantly compliment the delicate, natural fragrances that aren't overpowering like synthetic alternatives. We appreciate that they offer both retail and bulk packaging options.</p>
+                                </div>
+                                <div class="testimonial-author">
+                                    <div class="author-img">
+                                        <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Arnav Thakur">
+                                    </div>
+                                    <div class="author-info">
+                                        <h4>Arnav Thakur</h4>
+                                        <p>Owner, Social Spa Chain</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="splide__slide">
+                            <div class="testimonial-card">
+                                <div class="testimonial-text">
+                                    <p>As an importer of wellness products to Europe, we appreciate Naturoma's attention to international compliance and packaging standards. Their products meet all EU regulations effortlessly. The organic certification has helped us expand into premium markets.</p>
+                                </div>
+                                <div class="testimonial-author">
+                                    <div class="author-img">
+                                        <img src="https://randomuser.me/api/portraits/women/68.jpg" alt="Nisha Tiwari">
+                                    </div>
+                                    <div class="author-info">
+                                        <h4>Nisha Tiwari</h4>
+                                        <p>Director, IndiWell Imports</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
                 </div>
             </div>
-            
-            <div class="testimonial-nav">
-                <button class="active" data-testimonial="0"></button>
-                <button data-testimonial="1"></button>
-                <button data-testimonial="2"></button>
+        </div>
+    </section>
+    
+    <!-- CTA Section -->
+    <section class="cta">
+        <div class="container">
+            <h2 data-aos="fade-up">Ready to Elevate Your Product Line?</h2>
+            <p data-aos="fade-up" data-aos-delay="100" style="color: white;">Partner with Naturoma Purelax for premium quality incense sticks that your customers will love.</p>
+            <div data-aos="fade-up" data-aos-delay="200">
+                <a href="#contact" class="btn btn-primary">Get Wholesale Pricing</a>
             </div>
         </div>
     </section>
@@ -1378,75 +1933,108 @@
     <section class="section contact" id="contact">
         <div class="container">
             <h2 class="section-title" data-aos="fade-up">Get In Touch</h2>
+            <p class="text-center" data-aos="fade-up" data-aos-delay="100">We'd love to discuss how we can support your business with our premium incense products</p>
             
             <div class="contact-container">
                 <div class="contact-info" data-aos="fade-right">
                     <h3>Contact Information</h3>
-                    <p>Ready to discuss your wholesale incense needs? Reach out to our team for pricing, samples, or any questions.</p>
+                    <p>Ready to discuss your wholesale incense needs? Reach out to our team for pricing, samples, or any questions about our products and services.</p>
                     
                     <div class="contact-details">
-                        <div class="contact-item">
-                            <i class="fas fa-map-marker-alt"></i>
-                            <div>
+                        <div class="contact-item" style="align-items: center;">
+                            <div class="contact-icon" style="margin-top: 0;"></div>
+                            <div class="contact-text">
                                 <h4>Address</h4>
-                                <p>G H B SOCIETY, 777/5486, NR GAYATRI MANDIR, L B S ROAD,
- BAPUNAGAR, Ahmedabad, Gujarat, 380024</p>
+                                <p style="margin-bottom: 0;">🏠︎ G H B SOCIETY, 777/5486, NR GAYATRI MANDIR, L B S ROAD, BAPUNAGAR, Ahmedabad, Gujarat, 380024</p>
                             </div>
                         </div>
                         
                         <div class="contact-item">
-                            <i class="fas fa-phone-alt"></i>
-                            <div>
+                            <div class="contact-icon">
+                                <i class="fas fa-phone-alt"></i>
+                            </div>
+                            <div class="contact-text">
                                 <h4>Phone</h4>
-                                <p> +91 94081 07835</p>
+                                <a href="tel:+919408107835">+91 94081 07835</a>
                             </div>
                         </div>
                         
                         <div class="contact-item">
-                            <i class="fas fa-envelope"></i>
-                            <div>
+                            <div class="contact-icon">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div class="contact-text">
                                 <h4>Email</h4>
-                                <p>info@naturomaincense.com</p>
+                                <a href="mailto:info@naturomaincense.com">info@naturomaincense.com</a>
                             </div>
                         </div>
                     </div>
                     
+                    <h3 style="margin-top: 3rem;">Business Hours</h3>
+                    <p>Monday - Friday: 9:00 AM - 6:00 PM<br>
+                    Saturday: 10:00 AM - 4:00 PM<br>
+                    Sunday: Closed</p>
+                    
                     <div class="social-links">
-                        <a href="#"><i class="fab fa-facebook-f"></i></a>
-                        <a href="#"><i class="fab fa-instagram"></i></a>
-                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
-                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://www.instagram.com/naturoma_purelax/" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
                     </div>
                 </div>
                 
                 <div class="contact-form" data-aos="fade-left">
+                    <h3>Send Us a Message</h3>
                     <form id="enquiryForm">
                         <div class="form-group">
-                            <label for="name">Your Name</label>
-                            <input type="text" id="name" name="name" required>
+                            <label for="name">Your Name*</label>
+                            <input type="text" id="name" name="name" class="form-control" required>
                         </div>
                         
                         <div class="form-group">
-                            <label for="email">Email Address</label>
-                            <input type="email" id="email" name="email" required>
+                            <label for="email">Email Address*</label>
+                            <input type="email" id="email" name="email" class="form-control" required>
                         </div>
                         
                         <div class="form-group">
                             <label for="phone">Phone Number</label>
-                            <input type="tel" id="phone" name="phone">
+                            <input type="tel" id="phone" name="phone" class="form-control">
                         </div>
                         
                         <div class="form-group">
                             <label for="company">Company Name</label>
-                            <input type="text" id="company" name="company">
+                            <input type="text" id="company" name="company" class="form-control">
                         </div>
                         
                         <div class="form-group">
-                            <label for="message">Your Enquiry</label>
-                            <textarea id="message" name="message" required></textarea>
+                            <label for="interest">Product Interest</label>
+                            <select id="interest" name="interest" class="form-control">
+                                <option value="">Select an option</option>
+                                <option value="classic">Purelax POWER</option>
+                                <option value="mosquito">Purelax JUMBO</option>
+                                <option value="meditation">Purelax HERBAL</option>
+                                <option value="organic">COMING SOON</option>
+                                <option value="other">Other</option>
+                            </select>
                         </div>
                         
-                        <button type="submit" class="btn">Send Message</button>
+                        <div class="form-group">
+                            <label for="quantity">Estimated Monthly Quantity</label>
+                            <select id="quantity" name="quantity" class="form-control">
+                                <option value="">Select an option</option>
+                                <option value="100-500">100-500 boxes</option>
+                                <option value="500-1000">500-1,000 boxes</option>
+                                <option value="1000-5000">1,000-5,000 boxes</option>
+                                <option value="5000+">5,000+ boxes</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="message">Your Enquiry*</label>
+                            <textarea id="message" name="message" class="form-control" required></textarea>
+                        </div>
+                        
+                        <button type="submit" class="btn btn-primary" style="width: 100%;">Send Message</button>
                     </form>
                 </div>
             </div>
@@ -1459,7 +2047,7 @@
             <div class="footer-container">
                 <div class="footer-col">
                     <h3>NATUROMA PURELAX</h3>
-                    <p>Manufacturers of premium quality, organic incense sticks for wholesale and B2B customers worldwide since 2010.</p>
+                    <p style="color: white;">Manufacturers of premium quality, organic incense sticks for wholesale and B2B customers worldwide since 2016. Our products combine traditional craftsmanship with modern quality standards.</p>
                     <a href="https://wa.me/919408107835" class="whatsapp-btn" target="_blank">
                         <i class="fab fa-whatsapp"></i> WhatsApp Us
                     </a>
@@ -1473,43 +2061,175 @@
                         <li><a href="#products">Products</a></li>
                         <li><a href="#process">Our Process</a></li>
                         <li><a href="#testimonials">Testimonials</a></li>
-                        <li><a href="pages/contact.html">Contact</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                        <li><a href="#" id="privacyLinkFooter">Privacy Policy</a></li>
+                        <li><a href="#" id="termsLink">Terms of Service</a></li>
                     </ul>
                 </div>
                 
+                
                 <div class="footer-col">
                     <h3>Contact Info</h3>
-                    <ul class="footer-links">
-                        <li><i class="fas fa-map-marker-alt"></i> G H B SOCIETY, 777/5486, NR GAYATRI MANDIR, L B S ROAD,
- BAPUNAGAR, Ahmedabad, Gujarat, 380024</li>
-                        <li><i class="fas fa-phone-alt"></i> +91 94081 07835</li>
-                        <li><i class="fas fa-envelope"></i> info@naturomaincense.com</li>
+                    <ul class="footer-contact">
+                        <li>
+                             <span>🏠 G H B SOCIETY, 777/5486, NR GAYATRI MANDIR, L B S ROAD, BAPUNAGAR, Ahmedabad, Gujarat, 380024</span>
+                        </li>
+                        <li>
+                             <a href="tel:+919408107835">📞 +91 94081 07835</a>
+                        </li>
+                        <li>
+                            
+                             <a href="mailto:info@naturomaincense.com">📩 info@naturomaincense.com</a>
+                        </li>
                     </ul>
                     
                     <div class="social-links">
-                        <a href="#"><i class="fab fa-facebook-f"></i></a>
-                        <a href="https://www.instagram.com/naturoma_purelax/"><i class="fab fa-instagram"></i></a>
-                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
-                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://www.instagram.com/naturoma_purelax/" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
                     </div>
                 </div>
             </div>
             
             <div class="footer-bottom">
-                <p>&copy; 2025 Naturoma Purelax. All Rights Reserved.  Designed by Boostonix</p>
+                <p style="color: white;">&copy; 2025 Naturoma Purelax. All Rights Reserved. | Designed by Boostonix</p>
             </div>
         </div>
     </footer>
     
+    <!-- Privacy Policy Modal -->
+    <div class="modal" id="privacyModal">
+        <div class="modal-content">
+            <button class="close-modal" id="closeModal">&times;</button>
+            <h2>Privacy Policy</h2>
+            <p><strong>Last Updated:</strong> June 1, 2025</p>
+            
+            <h3>1. Introduction</h3>
+            <p>Naturoma Purelax ("we," "our," or "us") is committed to protecting your privacy. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you visit our website naturomapurelax.com.</p>
+            
+            <h3>2. Information We Collect</h3>
+            <p>We may collect personal information that you voluntarily provide to us when you:</p>
+            <ul>
+                <li>Fill out contact or inquiry forms</li>
+                <li>Request product samples or catalogs</li>
+                <li>Subscribe to our newsletter</li>
+                <li>Place orders for our products</li>
+            </ul>
+            
+            <h3>3. How We Use Your Information</h3>
+            <p>We may use the information we collect to:</p>
+            <ul>
+                <li>Respond to your inquiries and requests</li>
+                <li>Process and fulfill your orders</li>
+                <li>Improve our products and services</li>
+                <li>Send you marketing communications (with your consent)</li>
+                <li>Comply with legal obligations</li>
+            </ul>
+            
+            <h3>4. Data Security</h3>
+            <p>We implement appropriate technical and organizational measures to protect your personal information against unauthorized access, alteration, disclosure, or destruction.</p>
+            
+            <h3>5. Your Rights</h3>
+            <p>Depending on your location, you may have certain rights regarding your personal information, including:</p>
+            <ul>
+                <li>The right to access your data</li>
+                <li>The right to request correction of inaccurate data</li>
+                <li>The right to request deletion of your data</li>
+                <li>The right to object to or restrict processing</li>
+            </ul>
+            
+            <h3>6. Changes to This Policy</h3>
+            <p>We may update this Privacy Policy from time to time. We will notify you of any changes by posting the new Privacy Policy on this page.</p>
+            
+            <h3>7. Contact Us</h3>
+            <p>If you have any questions about this Privacy Policy, please contact us at:</p>
+            <p>Email: info@naturomapurelax.com<br>
+            Phone: +91 94081 07835</p>
+        </div>
+    </div>
+    
+    <!-- Terms of Service Modal -->
+    <div class="modal" id="termsModal">
+        <div class="modal-content">
+            <button class="close-modal" id="closeTermsModal">&times;</button>
+            <h2>Terms of Service</h2>
+            <p><strong>Last Updated:</strong> June 1, 2025</p>
+            
+            <h3>1. Acceptance of Terms</h3>
+            <p>By accessing or using the Naturoma Purelax website (naturomapurelax.com), you agree to be bound by these Terms of Service.</p>
+            
+            <h3>2. Products and Services</h3>
+            <p>We manufacture and sell premium incense sticks and related products. All product descriptions and prices are subject to change without notice.</p>
+            
+            <h3>3. Ordering and Payment</h3>
+            <p>All orders are subject to acceptance and product availability. We reserve the right to refuse any order. Payment terms will be specified in your wholesale agreement.</p>
+            
+            <h3>4. Shipping and Delivery</h3>
+            <p>Shipping costs and delivery times will vary depending on your location and order size. We are not responsible for delays caused by customs or other factors beyond our control.</p>
+            
+            <h3>5. Returns and Refunds</h3>
+            <p>Please inspect your order upon receipt. Contact us immediately if there are any issues with your shipment. Our return policy will be outlined in your wholesale agreement.</p>
+            
+            <h3>6. Intellectual Property</h3>
+            <p>All content on this website, including text, graphics, logos, and images, is our property and protected by copyright laws.</p>
+            
+            <h3>7. Limitation of Liability</h3>
+            <p>We shall not be liable for any indirect, incidental, or consequential damages arising from the use of our products or website.</p>
+            
+            <h3>8. Governing Law</h3>
+            <p>These Terms shall be governed by and construed in accordance with the laws of India, without regard to its conflict of law provisions.</p>
+            
+            <h3>9. Contact Information</h3>
+            <p>For any questions about these Terms, please contact us at:</p>
+            <p>Naturoma Purelax<br>
+            G H B SOCIETY, Ahmedabad, Gujarat, 380024<br>
+            Email: info@naturomapurelax.com<br>
+            Phone: +91 94081 07835</p>
+        </div>
+    </div>
+    
     <!-- Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.2/dist/gsap.min.js"></script>
+    
     <script>
         // Initialize AOS animation library
         AOS.init({
             duration: 800,
             easing: 'ease-in-out',
-            once: true
+            once: true,
+            offset: 100
         });
+        
+        // Initialize Splide sliders
+        new Splide('.gallery .splide', {
+            type: 'fade',
+            rewind: true,
+            autoplay: true,
+            interval: 5000,
+            pauseOnHover: false,
+            arrows: false,
+            pagination: true
+        }).mount();
+        
+        new Splide('.testimonials .splide', {
+            perPage: 1,
+            perMove: 1,
+            gap: '30px',
+            autoplay: true,
+            interval: 7000,
+            pauseOnHover: true,
+            arrows: false,
+            pagination: false,
+            breakpoints: {
+                768: {
+                    padding: { right: '20px' }
+                }
+            }
+        }).mount();
         
         // Mobile Menu Toggle
         const mobileMenuBtn = document.getElementById('mobileMenuBtn');
@@ -1519,6 +2239,7 @@
             mainNav.classList.toggle('active');
             mobileMenuBtn.innerHTML = mainNav.classList.contains('active') ? 
                 '<i class="fas fa-times"></i>' : '<i class="fas fa-bars"></i>';
+            document.body.style.overflow = mainNav.classList.contains('active') ? 'hidden' : '';
         });
         
         // Close mobile menu when clicking on a link
@@ -1528,6 +2249,7 @@
                 if (mainNav.classList.contains('active')) {
                     mainNav.classList.remove('active');
                     mobileMenuBtn.innerHTML = '<i class="fas fa-bars"></i>';
+                    document.body.style.overflow = '';
                 }
             });
         });
@@ -1540,55 +2262,73 @@
             } else {
                 header.classList.remove('scrolled');
             }
-        });
-        
-        // Gallery Slider
-        const slides = document.querySelectorAll('.slide');
-        const dots = document.querySelectorAll('.dot');
-        let currentSlide = 0;
-        
-        function showSlide(n) {
-            slides.forEach(slide => slide.classList.remove('active'));
-            dots.forEach(dot => dot.classList.remove('active'));
             
-            slides[n].classList.add('active');
-            dots[n].classList.add('active');
-            currentSlide = n;
-        }
-        
-        dots.forEach((dot, index) => {
-            dot.addEventListener('click', () => showSlide(index));
+            // Back to top button
+            const backToTop = document.querySelector('.back-to-top');
+            if (window.scrollY > 300) {
+                backToTop.classList.add('active');
+            } else {
+                backToTop.classList.remove('active');
+            }
         });
         
-        // Auto slide change
-        setInterval(() => {
-            currentSlide = (currentSlide + 1) % slides.length;
-            showSlide(currentSlide);
-        }, 5000);
-        
-        // Testimonial Slider
-        const testimonials = document.querySelectorAll('.testimonial');
-        const testimonialNav = document.querySelectorAll('.testimonial-nav button');
-        let currentTestimonial = 0;
-        
-        function showTestimonial(n) {
-            testimonials.forEach(testimonial => testimonial.classList.remove('active'));
-            testimonialNav.forEach(btn => btn.classList.remove('active'));
+        // Counter animation for stats
+        function animateCounters() {
+            const yearsExp = document.getElementById('yearsExp');
+            const productsMade = document.getElementById('productsMade');
+            const happyClients = document.getElementById('happyClients');
+            const countries = document.getElementById('countries');
             
-            testimonials[n].classList.add('active');
-            testimonialNav[n].classList.add('active');
-            currentTestimonial = n;
+            gsap.to(yearsExp, {
+                innerText: 9,
+                duration: 2,
+                snap: { innerText: 1 },
+                scrollTrigger: {
+                    trigger: '.stats',
+                    start: 'top 80%',
+                    toggleActions: 'play none none none'
+                }
+            });
+            
+            gsap.to(productsMade, {
+                innerText: 500000,
+                duration: 2,
+                snap: { innerText: 100000 },
+                scrollTrigger: {
+                    trigger: '.stats',
+                    start: 'top 80%',
+                    toggleActions: 'play none none none'
+                },
+                onUpdate: function () {
+                    productsMade.innerText = Math.floor(productsMade.innerText).toLocaleString();
+                },
+                onComplete: function () {
+                    productsMade.innerText = "500,000+";
+                }
+            });
+            
+            gsap.to(happyClients, {
+                innerText: 2500,
+                duration: 2,
+                snap: { innerText: 100 },
+                scrollTrigger: {
+                    trigger: '.stats',
+                    start: 'top 80%',
+                    toggleActions: 'play none none none'
+                }
+            });
+            
+            gsap.to(countries, {
+                innerText: 1,
+                duration: 2,
+                snap: { innerText: 1 },
+                scrollTrigger: {
+                    trigger: '.stats',
+                    start: 'top 80%',
+                    toggleActions: 'play none none none'
+                }
+            });
         }
-        
-        testimonialNav.forEach((btn, index) => {
-            btn.addEventListener('click', () => showTestimonial(index));
-        });
-        
-        // Auto testimonial change
-        setInterval(() => {
-            currentTestimonial = (currentTestimonial + 1) % testimonials.length;
-            showTestimonial(currentTestimonial);
-        }, 7000);
         
         // Form submission
         const enquiryForm = document.getElementById('enquiryForm');
@@ -1596,19 +2336,75 @@
             e.preventDefault();
             
             // Here you would typically send the form data to your server
-            // For demonstration, we'll just show an alert
-            alert('Thank you for your enquiry! We will contact you shortly.');
-            enquiryForm.reset();
+            // For demonstration, we'll show a success message
+            const submitBtn = enquiryForm.querySelector('button[type="submit"]');
+            submitBtn.innerHTML = '<i class="fas fa-check"></i> Message Sent';
+            submitBtn.style.backgroundColor = '#27ae60';
+            
+            setTimeout(() => {
+                submitBtn.innerHTML = 'Send Message';
+                submitBtn.style.backgroundColor = '';
+                enquiryForm.reset();
+            }, 3000);
+        });
+        
+        // Modal functionality
+        const privacyLink = document.getElementById('privacyLink');
+        const privacyLinkFooter = document.getElementById('privacyLinkFooter');
+        const termsLink = document.getElementById('termsLink');
+        const privacyModal = document.getElementById('privacyModal');
+        const termsModal = document.getElementById('termsModal');
+        const closeModal = document.getElementById('closeModal');
+        const closeTermsModal = document.getElementById('closeTermsModal');
+        
+        privacyLink.addEventListener('click', (e) => {
+            e.preventDefault();
+            privacyModal.classList.add('active');
+            document.body.style.overflow = 'hidden';
+        });
+        
+        privacyLinkFooter.addEventListener('click', (e) => {
+            e.preventDefault();
+            privacyModal.classList.add('active');
+            document.body.style.overflow = 'hidden';
+        });
+        
+        termsLink.addEventListener('click', (e) => {
+            e.preventDefault();
+            termsModal.classList.add('active');
+            document.body.style.overflow = 'hidden';
+        });
+        
+        closeModal.addEventListener('click', () => {
+            privacyModal.classList.remove('active');
+            document.body.style.overflow = '';
+        });
+        
+        closeTermsModal.addEventListener('click', () => {
+            termsModal.classList.remove('active');
+            document.body.style.overflow = '';
+        });
+        
+        // Close modal when clicking outside
+        window.addEventListener('click', (e) => {
+            if (e.target === privacyModal) {
+                privacyModal.classList.remove('active');
+                document.body.style.overflow = '';
+            }
+            if (e.target === termsModal) {
+                termsModal.classList.remove('active');
+                document.body.style.overflow = '';
+            }
         });
         
         // Create floating elements dynamically
         const floatingContainer = document.querySelector('.floating-elements');
-        for (let i = 0; i < 10; i++) {
+        for (let i = 0; i < 15; i++) {
             const element = document.createElement('div');
             element.classList.add('floating-element');
             
-            // Random size between 20px and 80px
-            const size = Math.random() * 60 + 20;
+            // Random size between 10px and 60px
+            const size = Math.random() * 50 + 10;
             
             // Random position
             const top = Math.random() * 100;
@@ -1620,6 +2416,10 @@
             // Random delay between 0s and 10s
             const delay = Math.random() * 10;
             
+            // Random color
+            const colors = ['rgba(26, 82, 118, 0.1)', 'rgba(39, 174, 96, 0.1)', 'rgba(231, 76, 60, 0.1)'];
+            const randomColor = colors[Math.floor(Math.random() * colors.length)];
+            
             element.style.width = `${size}px`;
             element.style.height = `${size}px`;
             element.style.top = `${top}%`;
@@ -1627,9 +2427,15 @@
             element.style.animationDuration = `${duration}s`;
             element.style.animationDelay = `${delay}s`;
             element.style.opacity = Math.random() * 0.3 + 0.1;
+            element.style.background = randomColor;
             
             floatingContainer.appendChild(element);
         }
+        
+        // Initialize animations when page loads
+        document.addEventListener('DOMContentLoaded', () => {
+            animateCounters();
+        });
     </script>
 </body>
 </html>
